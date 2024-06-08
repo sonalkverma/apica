@@ -1,0 +1,13 @@
+version: '1'
+services:
+  springboot-app:
+    image: apica-kafka
+    restart: always
+    build: .
+    ports: 
+      - 8200:8200
+    environment:
+      MYSQL_HOST: mysqldb
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
